@@ -27,8 +27,8 @@ client = InfluxDBClient(
     verify_ssl=True)
 
 
-# d = Daemonizer(cherrypy.engine)
-# d.subscribe()
+d = Daemonizer(cherrypy.engine)
+d.subscribe()
 root_dir = os.path.abspath(os.path.dirname(__file__))
 cherrypy.config.update({'server.socket_port': 8083}),
 
