@@ -50,7 +50,7 @@ class LocationApiWebService():
             print "noch keien Daten vorhanden"
         return str(json.dumps(list(result.get_points())[0]))
 
-    def POST(self, id, name, entry, date, radius, device, latitude="",
+    def POST(self, id, name, entry, date, device, radius=-1, latitude="",
              longitude="", address="", beaconUUID="", major="", minor=""):
         # print address.decode('utf-8')
         json_body = [
